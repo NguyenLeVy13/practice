@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Practice 1</title>
-  </head>
-  <body>
-    <div class="section">
-      <div class="container">
-        <div class="close">
-          <img src="./images/Close.png" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <title>Practice 1</title>
+</head>
+
+<body>
+  <div class="section">
+    <div class="container">
+      <div class="close">
+        <img src="./images/Close.png" />
+      </div>
+      <div class="illustration">
+        <img src="./images/Illustration.png" />
+      </div>
+      <div class="error">
+        <div class="error-container">
+          <img src="./images/Icons.png" />
+          <p class="error-text">404 Error</p>
         </div>
-        <div class="illustration">
-          <img src="./images/Illustration.png" />
+        <h1 class="page-not-found">Page not Found</h1>
+      </div>
+      <div class="description">
+        <p>
+          Sorry, the page you are looking for doesn’t exist or has been
+          removed. Keep exploring out site:
+        </p>
+      </div>
+      <div class="search">
+        <div class="search-input-container">
+          <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M6.66667 2.14563C4.08934 2.14563 2 4.23497 2 6.8123C2 9.38963 4.08934 11.479 6.66667 11.479C7.71489 11.479 8.68239 11.1334 9.46145 10.5499L12.1953 13.2838C12.4557 13.5441 12.8778 13.5441 13.1381 13.2838C13.3985 13.0234 13.3985 12.6013 13.1381 12.3409L10.4043 9.60708C10.9877 8.82802 11.3333 7.86052 11.3333 6.8123C11.3333 4.23497 9.244 2.14563 6.66667 2.14563ZM3.33333 6.8123C3.33333 4.97135 4.82572 3.47896 6.66667 3.47896C8.50762 3.47896 10 4.97135 10 6.8123C10 8.65325 8.50762 10.1456 6.66667 10.1456C4.82572 10.1456 3.33333 8.65325 3.33333 6.8123Z"
+              fill="#64748B" />
+          </svg>
+          <input type="text" class="search-input" id="search" placeholder="Search our site" />
         </div>
-        <div class="error">
-          <div class="error-container">
-            <img src="./images/Icons.png" />
-            <p class="error-text">404 Error</p>
-          </div>
-          <h1 class="page-not-found">Page not Found</h1>
-        </div>
-        <div class="description">
-          <p>
-            Sorry, the page you are looking for doesn’t exist or has been
-            removed. Keep exploring out site:
-          </p>
-        </div>
-        <div class="search">
-          <input type="text" class="search-input" />
-          <button type="button" class="button-search">Search</button>
-        </div>
+        <button type="button" class="button-search" onclick="onSearch()">Search</button>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+<script>
+function onSearch() {
+  var value = document.getElementById("search").value;
+  window.open(value);
+}
+</script>
 </html>
